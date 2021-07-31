@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Projects/Android Architecture Component Apps/ToDoApp/app/src/main/res/drawable/ic_add.xml" value="0.16944444444444445" />
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/ToDoApp/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.13802083333333334" />
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/ToDoApp/app/src/main/res/layout/activity_main.xml" value="0.1078125" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/ToDoApp/app/src/main/res/layout/fragment_edit_item.xml" value="0.1793478260869565" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/ToDoApp/app/src/main/res/layout/fragment_home_screen.xml" value="0.1793478260869565" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/ToDoApp/app/src/main/res/layout/list_item.xml" value="0.176" />
