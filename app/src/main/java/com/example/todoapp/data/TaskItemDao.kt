@@ -1,4 +1,4 @@
-package com.example.todoapp.repository
+package com.example.todoapp.data
 
 import androidx.room.*
 import com.example.todoapp.data.TaskItem

@@ -2,8 +2,8 @@ package com.example.todoapp.di
 
 import android.app.Application
 import androidx.room.Room
-import com.example.todoapp.repository.TaskItemDao
-import com.example.todoapp.repository.TaskItemDatabase
+import com.example.todoapp.data.TaskItemDao
+import com.example.todoapp.data.TaskItemDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +16,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideTaskItemDb(app: Application): TaskItemDatabase = Room.databaseBuilder(app,TaskItemDatabase::class.java,"TASK_DATABASE")
+    fun provideTaskItemDb(app: Application): TaskItemDatabase = Room.databaseBuilder(app,
+        TaskItemDatabase::class.java,"TASK_DATABASE")
         .fallbackToDestructiveMigration()
         .build()
 
