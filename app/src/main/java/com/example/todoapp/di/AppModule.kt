@@ -20,7 +20,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideTaskItemDb(app: Application,callback: RoomDatabase.Callback): TaskItemDatabase = Room.databaseBuilder(app,
+    fun provideTaskItemDb(app: Application,callback:TaskItemDatabase.Callback): TaskItemDatabase = Room.databaseBuilder(app,
         TaskItemDatabase::class.java,"TASK_DATABASE")
         .fallbackToDestructiveMigration()
         .addCallback(callback)
