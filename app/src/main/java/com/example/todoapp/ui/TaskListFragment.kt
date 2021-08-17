@@ -2,7 +2,11 @@ package com.example.todoapp.ui
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
@@ -36,5 +40,40 @@ class TaskListFragment: Fragment(R.layout.fragment_task_list) {
             taskAdapter.submitList(it)
         }
 
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.task_list_menu,menu)
+
+        val searchItem = menu.findItem(R.id.action_search)
+        val searchView = searchItem.actionView as SearchView
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.action_search->{
+                //to be implemented
+                return true
+            }
+            R.id.action_sort_by_name->{
+                //to be implemented
+                return true
+            }
+            R.id.action_sort_by_importance->{
+                //to be implemented
+                return true
+            }
+            R.id.action_hide_completed->{
+                item.isChecked = !item.isChecked
+                //to be implemented
+                return true
+            }
+            R.id.action_delete_completed->{
+                //to be implemented
+                return true
+            }
+            else-> super.onOptionsItemSelected(item)
+        }
     }
 }
