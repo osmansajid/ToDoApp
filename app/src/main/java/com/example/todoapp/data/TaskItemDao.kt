@@ -16,6 +16,6 @@ interface TaskItemDao {
     @Update
     suspend fun  update(task: TaskItem)
 
-    @Query("SELECT * FROM TASKITEM")
-    fun getAllItem(): Flow<List<TaskItem>>
+    @Query("SELECT * FROM TASKITEM WHERE NAME LIKE '%' || :searchQuery || '%' ORDER BY ISIMPORTANT DESC")
+    fun getAllItem(searchQuery: String): Flow<List<TaskItem>>
 }

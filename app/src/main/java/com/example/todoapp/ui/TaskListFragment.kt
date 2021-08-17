@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todoapp.R
 import com.example.todoapp.adapter.TaskItemAdapter
 import com.example.todoapp.databinding.FragmentTaskListBinding
+import com.example.todoapp.utils.onQueryTextChangeListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -48,6 +49,10 @@ class TaskListFragment: Fragment(R.layout.fragment_task_list) {
 
         val searchItem = menu.findItem(R.id.action_search)
         val searchView = searchItem.actionView as SearchView
+
+        searchView.onQueryTextChangeListener {
+            viewModel.searchQuery.value = it
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

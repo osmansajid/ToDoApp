@@ -18,5 +18,5 @@ class TaskRepository @Inject constructor(private val taskItemDao: TaskItemDao) {
         taskItemDao.delete(task)
     }
 
-    fun getAllTask() = taskItemDao.getAllItem()
+    fun getAllTask(searchQuery: String) = taskItemDao.getAllItem(searchQuery)
 }
