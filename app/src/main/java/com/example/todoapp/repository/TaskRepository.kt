@@ -2,6 +2,7 @@ package com.example.todoapp.repository
 
 import com.example.todoapp.data.TaskItem
 import com.example.todoapp.data.TaskItemDao
+import com.example.todoapp.ui.SortOrder
 import javax.inject.Inject
 
 class TaskRepository @Inject constructor(private val taskItemDao: TaskItemDao) {
@@ -18,5 +19,5 @@ class TaskRepository @Inject constructor(private val taskItemDao: TaskItemDao) {
         taskItemDao.delete(task)
     }
 
-    fun getAllTask(searchQuery: String) = taskItemDao.getAllItem(searchQuery)
+    fun getAllTask(searchQuery: String,sortBy: SortOrder, hideCompleted: Boolean) = taskItemDao.getAllItem(searchQuery,sortBy,hideCompleted)
 }

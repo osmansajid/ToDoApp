@@ -62,16 +62,16 @@ class TaskListFragment: Fragment(R.layout.fragment_task_list) {
                 return true
             }
             R.id.action_sort_by_name->{
-                //to be implemented
+                viewModel.sortOrder.value = SortOrder.BY_NAME
                 return true
             }
-            R.id.action_sort_by_importance->{
-                //to be implemented
+            R.id.action_sort_by_date->{
+                viewModel.sortOrder.value = SortOrder.BY_CREATED_DATE
                 return true
             }
             R.id.action_hide_completed->{
                 item.isChecked = !item.isChecked
-                //to be implemented
+                viewModel.hideCompleted.value = item.isChecked
                 return true
             }
             R.id.action_delete_completed->{

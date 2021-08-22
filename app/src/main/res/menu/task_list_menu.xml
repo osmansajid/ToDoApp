@@ -22,7 +22,7 @@
                 app:showAsAction="never"
                 />
             <item
-                android:id="@+id/action_sort_by_importance"
+                android:id="@+id/action_sort_by_date"
                 android:title="Sort by date created"
                 app:showAsAction="never"
                 />
